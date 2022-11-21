@@ -1,3 +1,6 @@
+## [English](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa) | [中文](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/docs/Readme_CN.md)
+------------------------
+
 ## Platform
 - CPU: I5-10400F
 - Motherboard: [Soarsea P310S B360](https://syvvz.com/gysoarsea)
@@ -23,13 +26,13 @@
 - Note that, USBInjectAll.kext must be disabled when using USBPorts.kext.
 
 ## How to hack Graphics Card?
-- Find the acpi path for your Graphics Card under Windows, Something like this: ACPI(\_SB_)#ACPI(PCI0)#ACPI(GPP0)#ACPI(VGA_). Then your acpi path will be "\_SB_.PCI0.GPP0.GPP0.VGA_"
+- Find the acpi path for your Graphics Card under Windows, Something like this: ACPI(\_SB_)#ACPI(PCI0)#ACPI(GPP0)#ACPI(VGA_), [example](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/pics/pcie_graphics.png). Then your acpi path will be "\_SB_.PCI0.GPP0.GPP0.VGA_"
 - Get the [SSDT-GPU-SPOOF](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-GPU-SPOOF.dsl.zip) as dortania.github.io suggested.
-    - The .dsl file may look like this: [SPOOF-ORIGINAL]().
+    - The .dsl file may look like this: [SPOOF-ORIGINAL](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-ORIGINAL.dsl).
     - Replace the "\_SB_.PCI0.PEG0.PEGP" like variables with the acpi path you've got.
-    - Replace the "Method (_DSM, 4, NotSerialized)" method with the method like this: [method]().
+    - Replace the "Method (_DSM, 4, NotSerialized)" method with the method like this: [new method](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-METHOD.txt).
     - Goto acpi.org, and download the [acpi tools](https://acpica.org/downloads/binary-tools).
-    - Compile the final GPU-SPOOF.dsl file with command like "./iasl.exe SSDT-GPU-SPOOF.dsl".
+    - Compile the final [GPU-SPOOF.dsl](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-FINALEXAMPLE.dsl) file with command like "./iasl.exe SSDT-GPU-SPOOF.dsl".
     - Now you can install Hackintosh with Graphics Card working but acceleration is not enabled, assuming you have already gathered other files.
 - After installation completed, login Hackintosh, and find your VGA compatible controller in Device properties using OpenCore Configurator. Copy the value of slot name, which may looks like "Internal@0,1,0/0,0".
 - Replace the slot name in your GPU-SPOOF.dsl file, recompile, save it to EFI. Then your AMD RX550 Lexa Core Graphics Card will be enabled with acceleration.
