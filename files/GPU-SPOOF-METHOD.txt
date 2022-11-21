@@ -1,0 +1,49 @@
+ Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+            {
+                Store (Package ()
+                    {
+                        "built-in", 
+                        Buffer (One)
+                        {
+                             0x00                                           
+                        }, 
+
+                        "AAPL,slot-name", 
+                        Buffer ()
+                        {
+                            "Internal@0,3,0/0,0" // Edit this Value, Get this Value in MacOS
+                        }, 
+
+                        "@0,AAPL,boot-display", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                         
+                        },
+
+                        "device-id", 
+                        Buffer (0x04)
+                        {
+                             0xFF, 0x67, 0x00, 0x00                         
+                        }, 
+
+                        "no-gfx-spoof", 
+                        Buffer (0x04)
+                        {
+                             0x00, 0x01, 0x00, 0x00                         
+                        }, 
+
+                        "ATY,DeviceID", 
+                        Buffer (0x02)
+                        {
+                             0xFF, 0x67                         
+                        },  
+
+                        "model", 
+                        Buffer ()
+                        {
+                            "AMD Radeon RX 550"
+                        }
+                    }, Local0)
+                DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
+                Return (Local0)
+            }
