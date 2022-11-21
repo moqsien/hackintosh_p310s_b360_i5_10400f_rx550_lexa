@@ -45,4 +45,4 @@
 - https://github.com/felipecaninnovaes/Ryzentosh-Rx550Lexa
 
 ## Screen Shots
-![graphics card]()
+![graphics card](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/pics/screen_shot.jpg)
