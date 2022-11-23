@@ -37,6 +37,7 @@
 - After installation completed, login Hackintosh, and find your VGA compatible controller in Device properties using OpenCore Configurator. Copy the value of slot name, which may looks like "Internal@0,1,0/0,0".
 - Replace the slot name in your GPU-SPOOF.dsl file, recompile, save it to EFI. Then your AMD RX550 Lexa Core Graphics Card will be enabled with acceleration.
 - Note that SSDT-GPU-SPOOF also need WhateverGreen.kext.
+- If you wanna show Graphics Card Temperature, you may also need this [.kext file](https://github.com/aluveitie/RadeonSensor/releases).
 
 ## Thanks to
 - https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html#prerequisites

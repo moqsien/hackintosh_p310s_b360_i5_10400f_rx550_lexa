@@ -39,6 +39,7 @@
 - 将上面得显卡插槽名称替换到SDDT-GPU-SPOOF.dsl文件(具体位置参考.dsl中的注释)；
 - 重新编译.dsl，得到的.aml文件加入EFI中，至此AMD RX550 Lexa显卡成功驱动，支持硬解加速；
 - 注意SSDT-GPU-SPOOF需要WhateverGreen.kext支持；
+- 如果想要在监控软件中显示显卡温度，则需要另外的[.kext文件](https://github.com/aluveitie/RadeonSensor/releases)；
 
 ## 感谢
 - https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html#prerequisites
