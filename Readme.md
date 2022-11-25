@@ -31,7 +31,7 @@
     - The .dsl file may look like this: [SPOOF-ORIGINAL](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-ORIGINAL.dsl).
     - Replace the "\_SB_.PCI0.PEG0.PEGP" like variables with the acpi path you've got.
     - Replace the "Method (_DSM, 4, NotSerialized)" method with the method like this: [new method](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-METHOD.txt).
-    - Goto acpi.org, and download the [acpi tools](https://acpica.org/downloads/binary-tools).
+    - Goto acpi.org, and download the [acpi tools](https://acpica.org/downloads/binary-tools); acpi tools for [macos](https://github.com/HelllGuest/acpica-tools-macos).
     - Compile the final [GPU-SPOOF.dsl](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-FINALEXAMPLE.dsl) file with command like "./iasl.exe SSDT-GPU-SPOOF.dsl".
     - Now you can install Hackintosh with Graphics Card working but acceleration is not enabled, assuming you have already gathered other files.
 - After installation completed, login Hackintosh, and find your VGA compatible controller in Device properties using OpenCore Configurator. Copy the value of slot name, which may looks like "Internal@0,1,0/0,0".

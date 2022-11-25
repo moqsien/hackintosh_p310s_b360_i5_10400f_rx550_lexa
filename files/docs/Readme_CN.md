@@ -31,7 +31,7 @@
   - .dsl文件类似于：[SPOOF-ORIGINAL](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-ORIGINAL.dsl)；
   - 用上面得到的APCI路径替换掉.dsl文件中的类似"\_SB_.PCI0.PEG0.PEGP"之类的参数；
   - 用[新方法](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-METHOD.txt)替换掉.dsl文件中的"Method (_DSM, 4, NotSerialized)"方法；
-  - 去acpi.org[官网](https://acpica.org/downloads/binary-tools)下载acpi工具；
+  - 去acpi.org[官网](https://acpica.org/downloads/binary-tools)下载acpi工具, [macos版本](https://github.com/HelllGuest/acpica-tools-macos)；
   - 使用"./iasl.exe SSDT-GPU-SPOOF.dsl"(在win下)命令编译[.dsl](https://github.com/moqsien/hackintosh_p310s_b360_i5_10400f_rx550_lexa/blob/main/files/GPU-SPOOF-FINALEXAMPLE.dsl)文件；
   - 此时已经仿冒好了显卡ID，可以安装，但是显卡不支持硬解加速；
   - 先安装Hackintosh；
