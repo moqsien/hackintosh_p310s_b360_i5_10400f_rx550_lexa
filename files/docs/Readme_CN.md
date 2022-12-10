@@ -40,6 +40,7 @@
 - 重新编译.dsl，得到的.aml文件加入EFI中，至此AMD RX550 Lexa显卡成功驱动，支持硬解加速；
 - 注意SSDT-GPU-SPOOF需要WhateverGreen.kext支持；
 - 如果想要在监控软件中显示显卡温度，则需要另外的[.kext文件](https://github.com/aluveitie/RadeonSensor/releases)；
+- 显卡风扇参数调整，亲测有一定效果：[视频](https://www.bilibili.com/video/BV1ZT4y1v7Ac/?spm_id_from=333.337.search-card.all.click), [帖子](https://www.reddit.com/r/hackintosh/comments/hg56pv/guide_polaris_rx_560_580_etc_custom_powerplay/)
 
 ## 感谢
 - https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html#prerequisites

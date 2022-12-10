@@ -38,6 +38,7 @@
 - Replace the slot name in your GPU-SPOOF.dsl file, recompile, save it to EFI. Then your AMD RX550 Lexa Core Graphics Card will be enabled with acceleration.
 - Note that SSDT-GPU-SPOOF also need WhateverGreen.kext.
 - If you wanna show Graphics Card Temperature, you may also need this [.kext file](https://github.com/aluveitie/RadeonSensor/releases).
+- Adjust the parameters for fans of the graphics card：[video](https://www.bilibili.com/video/BV1ZT4y1v7Ac/?spm_id_from=333.337.search-card.all.click), [post](https://www.reddit.com/r/hackintosh/comments/hg56pv/guide_polaris_rx_560_580_etc_custom_powerplay/)
 
 ## Thanks to
 - https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html#prerequisites
